@@ -1,0 +1,113 @@
+{
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "ibm.fin.ar",
+		"type": "application",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"tags": {
+			"keywords": [
+				"{{keyword1}}"
+			]
+		},
+		"ach": "FIN-CORE-AR"
+	},
+	"sap.ui5": {
+		"_version": "1.2.0",
+		"dependencies": {
+			"minUI5Version": "1.66.10",
+			"libs": {
+				"sap.m": {
+					"minVersion": "1.66.10"
+				},
+				"sap.ui.layout": {
+					"minVersion": "1.66.10"
+				},
+				"sap.ui.core": {
+					"minVersion": "1.66.10"
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": false,
+			"cozy": false
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/mystyle.css",
+					"id": ""
+				}
+			]
+		},
+		"rootView": {
+			"viewName": "sap.dev.order.view.App",
+			"id": "idApp",
+			"type": "XML"
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewPath": "sap.dev.order.view",
+				"viewType": "XML",
+				"controlId": "myApp"
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "navdeep",
+					"target": [
+						"donald",
+						"trump"
+					]
+				},
+				{
+					"pattern": "fruitDetail/{fid}",
+					"name": "kaur",
+					"target": [
+						"donald",
+						"modi"
+					]
+				}
+			],
+			"targets": {
+				"donald": {
+					"viewName": "View1",
+					"controlAggregation": "masterPages",
+					"viewID": "idView1"
+				},
+				"trump": {
+					"viewName": "Default",
+					"controlAggregation": "detailPages",
+					"viewID": "idEmpty"
+				},
+				"modi": {
+					"viewName": "View2",
+					"controlAggregation": "detailPages",
+					"viewID": "idView2"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_bluecrystal",
+			"sap_belize"
+		]
+	},
+	"_version": "1.9.0",
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zmy_app/webapp",
+		"_version": "1.1.0"
+	}
+}
