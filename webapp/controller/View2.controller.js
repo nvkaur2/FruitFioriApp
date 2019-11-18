@@ -42,7 +42,7 @@ sap.ui.define([
 		onSelect: function (oEvent) {
 			var oo = oEvent.getSource();
 			var a = oo.getSelectedItems();
-			if (a.length >= 2) {
+			if (a.length > 2) {
 				oo.setValueState(sap.ui.core.ValueState.Error);
 				oo.setValueStateText("Can only select 2 cities");
 			} else {
